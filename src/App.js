@@ -18,21 +18,22 @@ const stages = [
   {id:3, name: 'end'}
 ];
 
+
 const guessesQuantity = 3
 
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordsList)
-
+  
   const [pickedWord, setPickedWord] = useState("");
   const [pickedCategory, setPickedCategory] = useState("");
   const [letters, setLetters] = useState([])
-
+  
   const [guessedLetters, setGuessedLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
   const [guesses, setGuesses] = useState(guessesQuantity)
-  const [score, setScore] = useState(0)
-
+  const [score, setScore] = useState(50)
+  
   const pickWordAndCategory = () => {
     //pick a random category
     const categories = Object.keys(words)
@@ -119,7 +120,7 @@ function App() {
          />
       }
       {
-        gameStage === 'end' && <GameOver retry={retry} />
+        gameStage === 'end' && <GameOver retry={retry} score={score}/>
       }
     </div>
   );
