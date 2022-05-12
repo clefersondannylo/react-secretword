@@ -17,7 +17,7 @@
 </p>
 
 <h4 align='center'>
-    This is Secret Word, a game where players will try to find the secret word.
+    This is Secret Word, a game where players will try to find the secret word. Developed in Matheus Battisti's JavaScript course
 </h4>
 
 <p align="center">
